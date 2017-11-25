@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public enum Level
 {
@@ -12,38 +13,62 @@ public enum Level
 public class spawnBlocks : MonoBehaviour
 {
 	public Level level = Level.Bundeshaus;
-	public bool hookIsEmpty = true;
+	private bool hookIsEmpty = true;
 
 	private List<GameObject> startElements = new List<GameObject>();
 	//private List<GameObject> undroppedElements = new List<GameObject>();
 	private List<GameObject>.Enumerator blocksEnumerator;
 
-	// Use this for initialization
-	void Start ()
+    private GameObject activeBuildingPart;
+
+    // input handling
+    private bool spawnBtnClicked = false;
+    private bool spawnBtnDown = false;
+    private float timeSinceLastClick = 0.0f;
+    private float minimumSecondsBeteenClicks = 1.0f;
+
+    // Use this for initialization
+    void Start ()
 	{
 		GameObject buildingpart = null;
+        timeSinceLastClick = Time.timeSinceLevelLoad;
 
-		switch (level)
+        switch (level)
 		{
 			case Level.Bundeshaus:
-				buildingpart = (GameObject)Instantiate(new GameObject("Bundeshaus_fragment_01"));
-				buildingpart.SetActive(false);
-				startElements.Add(buildingpart);
-				buildingpart = (GameObject)Instantiate(new GameObject("Bundeshaus_fragment_01"));
-				buildingpart.SetActive(false);
-				startElements.Add(buildingpart);
-				break;
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus_fragment_01_prefab")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus_fragment_01_prefab")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus_fragment_01_prefab")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                break;
 			case Level.Stadttheater:
 				break;
 			case Level.Zytglogge:
 				break;
 			default:
-				buildingpart = (GameObject)Instantiate(new GameObject("Bundeshaus_fragment_01"));
-				buildingpart.SetActive(false);
-				startElements.Add(buildingpart);
 				break;
 		}
-		
+        		
 		// todo
 		//Shuffle(undroppedElements);
 		
@@ -53,14 +78,46 @@ public class spawnBlocks : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.GetButton("Fire1") && this.hookIsEmpty)
+        // handle clickevent
+        if (Input.GetButtonDown("Fire1") && (Time.timeSinceLevelLoad - timeSinceLastClick > minimumSecondsBeteenClicks))
+        {
+            spawnBtnDown = true;
+            timeSinceLastClick = Time.timeSinceLevelLoad;
+        }
+        else if (Input.GetButtonUp("Fire1") && spawnBtnDown)
+        {
+            spawnBtnDown = false;
+            this.spawnBtnClicked = true;
+        }
+
+        // spawn or drop when clicked
+        if (this.spawnBtnClicked && this.hookIsEmpty)
 		{
-			blocksEnumerator.MoveNext();
-			GameObject buildingPart = blocksEnumerator.Current;
-			Debug.Log(buildingPart);
-			buildingPart.transform.position = transform.position;
-			buildingPart.SetActive(true);
-			Debug.Log(transform.position);
+            this.spawnBtnClicked = false;
+            this.hookIsEmpty = false;
+
+            if (blocksEnumerator.MoveNext())
+            {
+                activeBuildingPart = blocksEnumerator.Current;
+                activeBuildingPart.transform.position = transform.position;
+                activeBuildingPart.SetActive(true);
+            }
+            else
+            {
+                activeBuildingPart = null;
+            }
 		}
-	}
+        else if (this.spawnBtnClicked && !this.hookIsEmpty)
+        {
+            this.spawnBtnClicked = false;
+            this.hookIsEmpty = true;
+
+            if (activeBuildingPart != null)
+            {
+                activeBuildingPart.GetComponent<Rigidbody2D>().simulated = true;
+                activeBuildingPart.transform.parent = null;
+                activeBuildingPart.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity;
+            }
+        }
+    }
 }

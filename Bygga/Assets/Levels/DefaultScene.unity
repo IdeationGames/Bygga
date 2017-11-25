@@ -547,7 +547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  hookIsEmpty: 1
 --- !u!50 &1792569144
 Rigidbody2D:
   serializedVersion: 4
