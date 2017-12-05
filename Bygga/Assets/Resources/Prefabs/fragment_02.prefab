@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1786447170943548}
+  m_RootGameObject: {fileID: 1017412518250190}
   m_IsPrefabParent: 1
---- !u!1 &1786447170943548
+--- !u!1 &1017412518250190
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4922777842139550}
-  - component: {fileID: 212410489002200164}
-  - component: {fileID: 50402596705924694}
-  - component: {fileID: 61935906946442368}
+  - component: {fileID: 4951997167169390}
+  - component: {fileID: 212028798522156884}
+  - component: {fileID: 50888879137274486}
+  - component: {fileID: 61220044286538384}
   m_Layer: 0
-  m_Name: Bundeshaus_fragment_01_prefab
+  m_Name: fragment_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4922777842139550
+--- !u!4 &4951997167169390
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1786447170943548}
+  m_GameObject: {fileID: 1017412518250190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.04, y: 0.48, z: 0}
-  m_LocalScale: {x: 0.40402025, y: 0.40402025, z: 0.40402025}
+  m_LocalScale: {x: 0.47968087, y: 0.47968087, z: 0.47968087}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50402596705924694
+--- !u!50 &50888879137274486
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1786447170943548}
+  m_GameObject: {fileID: 1017412518250190}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -62,12 +62,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61935906946442368
+--- !u!61 &61220044286538384
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1786447170943548}
+  m_GameObject: {fileID: 1017412518250190}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: e7c3987222e99354b81bca37e16ee138, type: 2}
@@ -75,19 +75,19 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 4.94, y: 3.87}
---- !u!212 &212410489002200164
+  m_Size: {x: 2.59, y: 3.55}
+--- !u!212 &212028798522156884
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1786447170943548}
+  m_GameObject: {fileID: 1017412518250190}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1344064757
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1584e14b7c6997548bf6770a2bf0dfcb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af1244701e1d87046a6413b664b28289, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
