@@ -60,6 +60,30 @@ public class spawnBlocks : MonoBehaviour
                 buildingpart.SetActive(false);
                 startElements.Add(buildingpart);
 
+				buildingpart = (GameObject)Instantiate(
+					Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_04")
+				);
+				buildingpart.transform.parent = this.transform;
+				buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+				buildingpart.SetActive(false);
+				startElements.Add(buildingpart);
+
+				buildingpart = (GameObject)Instantiate(
+					Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_05")
+				);
+				buildingpart.transform.parent = this.transform;
+				buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+				buildingpart.SetActive(false);
+				startElements.Add(buildingpart);
+
+				buildingpart = (GameObject)Instantiate(
+					Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_06")
+				);
+				buildingpart.transform.parent = this.transform;
+				buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+				buildingpart.SetActive(false);
+				startElements.Add(buildingpart);
+
                 break;
 			case Level.Stadttheater:
 				break;
