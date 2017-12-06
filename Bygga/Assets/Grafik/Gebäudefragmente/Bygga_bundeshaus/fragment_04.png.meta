@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 3b8e17722dc7f324694ee77dca1e8e10
-timeCreated: 1512592565
+timeCreated: 1512593605
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: fragment_04_0
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -39,7 +40,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 9
   spritePivot: {x: 0.501295, y: 1.544675}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 2}
   spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -58,10 +59,37 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: fragment_04_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 518
+        height: 117
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline:
+    - - {x: 0, y: 58.5}
+      - {x: 224.3006, y: 29.249998}
+      - {x: 224.30058, y: -29.250004}
+      - {x: -0.0000226425, y: -58.5}
+      - {x: -224.3006, y: -29.249994}
+      - {x: -224.3006, y: 29.249994}
   spritePackingTag: 
   userData: 
   assetBundleName: 
