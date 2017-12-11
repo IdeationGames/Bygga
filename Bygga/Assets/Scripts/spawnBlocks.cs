@@ -25,7 +25,7 @@ public class spawnBlocks : MonoBehaviour
     private bool spawnBtnClicked = false;
     private bool spawnBtnDown = false;
     private float timeSinceLastClick = 0.0f;
-    private float minimumSecondsBeteenClicks = 1.0f;
+    private float minimumSecondsBeteenClicks = 0.1f;
 
     // Use this for initialization
     void Start ()
@@ -37,7 +37,7 @@ public class spawnBlocks : MonoBehaviour
 		{
 			case Level.Bundeshaus:
                 buildingpart = (GameObject)Instantiate(
-                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus_fragment_01_prefab")
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_01")
                 );
                 buildingpart.transform.parent = this.transform;
                 buildingpart.GetComponent<Rigidbody2D>().simulated = false;

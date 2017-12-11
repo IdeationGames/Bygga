@@ -24,7 +24,7 @@ public class headMove : MonoBehaviour
 		horizontalMove = Input.GetAxis("Horizontal") * 2;
 
 		Vector2 currentPosition = transform.position;
-		// linear functino: y = mx + b; 0.28f is a trial and error result
+		// linear function: y = mx + b; 0.28f is a trial and error result
 		Vector2 moveDirection = new Vector2(horizontalMove * Time.deltaTime, -1 * 0.28f * horizontalMove * Time.deltaTime);
 		rigidBody.MovePosition(currentPosition + moveDirection);
 	}
