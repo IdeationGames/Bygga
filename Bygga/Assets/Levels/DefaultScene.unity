@@ -1186,7 +1186,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.04}
-  m_ConnectedAnchor: {x: 0, y: -1.6825057}
+  m_ConnectedAnchor: {x: 0, y: -1.6825055}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1577,7 +1577,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.04}
-  m_ConnectedAnchor: {x: 0, y: -1.5893967}
+  m_ConnectedAnchor: {x: 0, y: -1.5893956}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2115,7 +2115,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.04}
-  m_ConnectedAnchor: {x: 0, y: -1.682504}
+  m_ConnectedAnchor: {x: 0, y: -1.6825039}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2561,7 +2561,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.04}
-  m_ConnectedAnchor: {x: 0, y: -1.5893961}
+  m_ConnectedAnchor: {x: 0, y: -1.5893965}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2779,7 +2779,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.04}
-  m_ConnectedAnchor: {x: 0, y: -1.6825057}
+  m_ConnectedAnchor: {x: 0, y: -1.6825055}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3316,7 +3316,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1709783214}
   m_LocalRotation: {x: -0, y: -0, z: -0.13729952, w: 0.9905296}
-  m_LocalPosition: {x: 1.95, y: 2.55, z: -4.2764053}
+  m_LocalPosition: {x: -0.4579997, y: 3.1999998, z: -4.2764053}
   m_LocalScale: {x: 3.393655, y: 3.3936555, z: 3.3936555}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3384,7 +3384,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1792569140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9079998, y: -0.8499999, z: -4.24}
+  m_LocalPosition: {x: -0.5, y: -0.2, z: -4.24}
   m_LocalScale: {x: 3.4366312, y: 3.4366307, z: 3.4366307}
   m_Children:
   - {fileID: 546243695}
