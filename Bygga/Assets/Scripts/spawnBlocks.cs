@@ -37,7 +37,7 @@ public class spawnBlocks : MonoBehaviour
 		{
 			case Level.Bundeshaus:
                 buildingpart = (GameObject)Instantiate(
-                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_01")
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus" + Path.DirectorySeparatorChar + "fragment_01")
                 );
                 buildingpart.transform.parent = this.transform;
                 buildingpart.GetComponent<Rigidbody2D>().simulated = false;
@@ -45,7 +45,7 @@ public class spawnBlocks : MonoBehaviour
                 startElements.Add(buildingpart);
 
                 buildingpart = (GameObject)Instantiate(
-                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_02")
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus" + Path.DirectorySeparatorChar + "fragment_02")
                 );
                 buildingpart.transform.parent = this.transform;
                 buildingpart.GetComponent<Rigidbody2D>().simulated = false;
@@ -53,7 +53,7 @@ public class spawnBlocks : MonoBehaviour
                 startElements.Add(buildingpart);
 
                 buildingpart = (GameObject)Instantiate(
-                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_03")
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus" + Path.DirectorySeparatorChar + "fragment_03")
                 );
                 buildingpart.transform.parent = this.transform;
                 buildingpart.GetComponent<Rigidbody2D>().simulated = false;
@@ -61,7 +61,7 @@ public class spawnBlocks : MonoBehaviour
                 startElements.Add(buildingpart);
 
 				buildingpart = (GameObject)Instantiate(
-					Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_04")
+					Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus" + Path.DirectorySeparatorChar + "fragment_04")
 				);
 				buildingpart.transform.parent = this.transform;
 				buildingpart.GetComponent<Rigidbody2D>().simulated = false;
@@ -69,7 +69,7 @@ public class spawnBlocks : MonoBehaviour
 				startElements.Add(buildingpart);
 
 				buildingpart = (GameObject)Instantiate(
-					Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_05")
+					Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus" + Path.DirectorySeparatorChar + "fragment_05")
 				);
 				buildingpart.transform.parent = this.transform;
 				buildingpart.GetComponent<Rigidbody2D>().simulated = false;
@@ -77,7 +77,7 @@ public class spawnBlocks : MonoBehaviour
 				startElements.Add(buildingpart);
 
 				buildingpart = (GameObject)Instantiate(
-					Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "fragment_06")
+					Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Bundeshaus" + Path.DirectorySeparatorChar + "fragment_06")
 				);
 				buildingpart.transform.parent = this.transform;
 				buildingpart.GetComponent<Rigidbody2D>().simulated = false;
