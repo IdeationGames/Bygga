@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class comparePlacement : MonoBehaviour
+public class ComparePlacement : MonoBehaviour
 {
     public bool runComparison = true;
 
@@ -32,10 +32,12 @@ public class comparePlacement : MonoBehaviour
                 if (currentSpriteRenderer.sprite == allSpriteObjs[i].sprite
                     && !allSpriteObjs[i].Equals(currentSpriteRenderer))
                 {
+                    // calculate score and update global score
                     float distance = Vector2.Distance(allSpriteObjs[i].transform.position, currentSpriteRenderer.transform.position);
-                    globalInfo.gameScoreFromDistance(distance);
+                    GlobalInfo.gameScoreFromDistance(distance);
                     runComparison = false;
-
+                    
+                    // create explosions as visual feedback
                     GameObject explosion1 = (GameObject)Instantiate(
                         Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Effects" + Path.DirectorySeparatorChar + "explosionAnim")
                     );
@@ -46,6 +48,7 @@ public class comparePlacement : MonoBehaviour
                         Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Effects" + Path.DirectorySeparatorChar + "explosionAnim")
                     );
 
+                    // set explosion position
                     Vector3 positionBottomLeft = currentSpriteRenderer.bounds.center - currentSpriteRenderer.bounds.extents;
                     Vector3 positionBottomMiddle = currentSpriteRenderer.bounds.center - currentSpriteRenderer.bounds.extents;
                     Vector3 positionBottomRight = currentSpriteRenderer.bounds.center - currentSpriteRenderer.bounds.extents;
@@ -55,6 +58,11 @@ public class comparePlacement : MonoBehaviour
                     explosion1.transform.position = positionBottomLeft;
                     explosion2.transform.position = positionBottomMiddle;
                     explosion3.transform.position = positionBottomRight;
+
+                    //  add destroy script
+                    explosion1.AddComponent<AnimationAutoDestroy>();
+                    explosion2.AddComponent<AnimationAutoDestroy>();
+                    explosion3.AddComponent<AnimationAutoDestroy>();
                 }
             }
         }

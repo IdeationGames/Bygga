@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class globalInfo : MonoBehaviour
+public class GlobalInfo : MonoBehaviour
 {
     private static int gameScore = 0;
 
@@ -31,6 +31,10 @@ public class globalInfo : MonoBehaviour
         {
             float reverse = 100 * (1.0f - distance);
             gameScore += (int) reverse;
+        }
+        else if (distance > 1.0f && distance < 2.0f)
+        {
+            gameScore += 5;
         }
 
         Debug.Log(gameScore);

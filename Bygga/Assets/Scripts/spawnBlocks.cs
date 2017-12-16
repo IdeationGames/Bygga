@@ -10,7 +10,7 @@ public enum Level
 	Zytglogge = 2
 }
 
-public class spawnBlocks : MonoBehaviour
+public class SpawnBlocks : MonoBehaviour
 {
 	public Level level = Level.Bundeshaus;
 	private bool hookIsEmpty = true;
