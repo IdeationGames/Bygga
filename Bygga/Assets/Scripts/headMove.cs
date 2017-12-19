@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeadMove : MonoBehaviour
+public class headMove : MonoBehaviour
 {
 	private Rigidbody2D rigidBody;
 	private float horizontalMove = 0.0f;

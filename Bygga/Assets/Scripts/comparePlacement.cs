@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class ComparePlacement : MonoBehaviour
+public class comparePlacement : MonoBehaviour
 {
     public bool runComparison = true;
 
@@ -34,7 +34,7 @@ public class ComparePlacement : MonoBehaviour
                 {
                     // calculate score and update global score
                     float distance = Vector2.Distance(allSpriteObjs[i].transform.position, currentSpriteRenderer.transform.position);
-                    GlobalInfo.gameScoreFromDistance(distance);
+                    globalInfo.gameScoreFromDistance(distance);
                     runComparison = false;
                     
                     // create explosions as visual feedback

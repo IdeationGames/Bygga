@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalInfo : MonoBehaviour
+public class globalInfo : MonoBehaviour
 {
     private static int gameScore = 0;
 
