@@ -39,13 +39,13 @@ public class comparePlacement : MonoBehaviour
                     
                     // create explosions as visual feedback
                     GameObject explosion1 = (GameObject)Instantiate(
-                        Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Effects" + Path.DirectorySeparatorChar + "explosionAnim")
+						Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Effects" + Path.DirectorySeparatorChar + "explosionAnim")
                     );
                     GameObject explosion2 = (GameObject)Instantiate(
-                        Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Effects" + Path.DirectorySeparatorChar + "explosionAnim")
+						Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Effects" + Path.DirectorySeparatorChar + "explosionAnim")
                     );
                     GameObject explosion3 = (GameObject)Instantiate(
-                        Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Effects" + Path.DirectorySeparatorChar + "explosionAnim")
+						Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Effects" + Path.DirectorySeparatorChar + "explosionAnim")
                     );
 
                     // set explosion position
