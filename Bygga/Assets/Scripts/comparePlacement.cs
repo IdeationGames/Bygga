@@ -63,6 +63,9 @@ public class comparePlacement : MonoBehaviour
                     explosion1.AddComponent<AnimationAutoDestroy>();
                     explosion2.AddComponent<AnimationAutoDestroy>();
                     explosion3.AddComponent<AnimationAutoDestroy>();
+
+                    // destroy blueprint
+                    Destroy(allSpriteObjs[i]);
                 }
             }
         }
