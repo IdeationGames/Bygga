@@ -21,20 +21,35 @@ public class playsoundkeyinput : MonoBehaviour {
 	void Update () {
 
 		if (Input.GetKeyDown (KeyCode.A)) {
-			keya.Play();
-		}
+            if (keya != null)
+            {
+                keya.Play();
+            }
+        }
 		if (Input.GetKeyDown (KeyCode.D)) {
-			keyd.Play();
-		}
+            if (keyd != null)
+            {
+                keyd.Play();
+            }
+        }
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			arrowleft.Play();
-		}
+            if (arrowleft != null)
+            {
+                arrowleft.Play();
+            }
+        }
 		if (Input.GetKeyDown (KeyCode.RightArrow)) {
-			arrowright.Play();
-		}
+            if (arrowright != null)
+            {
+                arrowright.Play();
+            }
+        }
 		if (Input.GetKeyDown (KeyCode.Mouse0)){
-			mouse1.Play();
-		}
+            if (mouse1 != null)
+            {
+                mouse1.Play();
+            }
+        }
 
 	}
 }
