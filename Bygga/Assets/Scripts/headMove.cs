@@ -21,11 +21,13 @@ public class headMove : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		horizontalMove = Input.GetAxis("Horizontal") * 2;
+		//horizontalMove = Input.GetAxis("Horizontal") * 2;
+		horizontalMove = Input.GetAxis("Horizontal") * 100;
 
 		Vector2 currentPosition = transform.position;
 		// linear function: y = mx + b; 0.28f is a trial and error result
 		Vector2 moveDirection = new Vector2(horizontalMove * Time.deltaTime, -1 * 0.28f * horizontalMove * Time.deltaTime);
-		rigidBody.MovePosition(currentPosition + moveDirection);
+        //rigidBody.MovePosition(currentPosition + moveDirection);
+        rigidBody.velocity = moveDirection;
 	}
 }
