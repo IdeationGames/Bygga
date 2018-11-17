@@ -7,7 +7,9 @@ public enum Level
 {
 	Bundeshaus = 0,
 	Stadttheater = 1,
-	Zytglogge = 2
+	Zytglogge = 2,
+	Chindlifresser = 3,
+	Kornhausbruecke = 4
 }
 
 public class spawnBlocks : MonoBehaviour
@@ -88,6 +90,10 @@ public class spawnBlocks : MonoBehaviour
 			case Level.Stadttheater:
 				break;
 			case Level.Zytglogge:
+				break;
+			case Level.Chindlifresser:
+				break;
+			case Level.Kornhausbruecke:
 				break;
 			default:
 				break;
