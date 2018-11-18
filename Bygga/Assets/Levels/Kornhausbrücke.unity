@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4731881644447696, guid: ff01c7cb744ed4245994b0c79a315b04, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.8140001
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 4731881644447696, guid: ff01c7cb744ed4245994b0c79a315b04, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2690,7 +2690,7 @@ Transform:
   m_PrefabInternal: {fileID: 2033913939}
   m_GameObject: {fileID: 942594959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.57, y: -3.71, z: -1.4975}
+  m_LocalPosition: {x: -1.57, y: -3.337, z: -1.4975}
   m_LocalScale: {x: 0.13765542, y: 0.13765542, z: 0.13765542}
   m_Children: []
   m_Father: {fileID: 1732741614}
@@ -2768,7 +2768,7 @@ Transform:
   m_PrefabInternal: {fileID: 6832883}
   m_GameObject: {fileID: 955919538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.18685603, y: -3.8140001, z: -1.4975}
+  m_LocalPosition: {x: 0.18685603, y: -3.4, z: -1.4975}
   m_LocalScale: {x: 0.13765542, y: 0.13765542, z: 0.13765542}
   m_Children: []
   m_Father: {fileID: 1732741614}
@@ -2846,7 +2846,7 @@ Transform:
   m_PrefabInternal: {fileID: 1063982486}
   m_GameObject: {fileID: 978625517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3459, y: -3.7947001, z: -1.4975}
+  m_LocalPosition: {x: -3.3459, y: -3.3807, z: -1.4975}
   m_LocalScale: {x: 0.13765542, y: 0.13765542, z: 0.13765542}
   m_Children: []
   m_Father: {fileID: 1732741614}
@@ -2985,7 +2985,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4878431222086608, guid: 5cc4f371611fa406faa2a31acddc3057, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.7947001
+      value: -3.3807
       objectReference: {fileID: 0}
     - target: {fileID: 4878431222086608, guid: 5cc4f371611fa406faa2a31acddc3057, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4748,6 +4748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 4
+  levelChangeCanvas: {fileID: 0}
 --- !u!50 &1792569144
 Rigidbody2D:
   serializedVersion: 4
@@ -5436,7 +5437,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4941137203124268, guid: d2295c8d894e443f7bc33202beb91668, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.71
+      value: -3.337
       objectReference: {fileID: 0}
     - target: {fileID: 4941137203124268, guid: d2295c8d894e443f7bc33202beb91668, type: 2}
       propertyPath: m_LocalPosition.z
