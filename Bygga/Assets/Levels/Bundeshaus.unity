@@ -5142,7 +5142,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1656385808}
   m_OnClick:
     m_PersistentCalls:
@@ -5753,6 +5753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   levelChangeCanvas: {fileID: 251842991}
+  nextLevelButton: {fileID: 1656385807}
 --- !u!50 &1792569144
 Rigidbody2D:
   serializedVersion: 4
