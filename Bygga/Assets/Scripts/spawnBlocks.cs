@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public enum Level
 {
@@ -16,6 +17,7 @@ public class spawnBlocks : MonoBehaviour
 {
 	public Level level = Level.Bundeshaus;
 	public GameObject levelChangeCanvas;
+	public Button nextLevelButton;
 	private bool hookIsEmpty = true;
 
 	private List<GameObject> startElements = new List<GameObject>();
@@ -267,6 +269,19 @@ public class spawnBlocks : MonoBehaviour
 				if (!currentObj.GetComponent<Rigidbody2D>().IsSleeping())
 				{
 					allPlaced = false;
+				}
+			}
+
+			// player must have 100 points for the level to complete
+			if (globalInfo.getGameScore() > 100)
+			{
+				if (nextLevelButton != null)
+				{
+					nextLevelButton.interactable = true;
+				}
+				else
+				{
+					Debug.LogWarning("next level button not referenced");
 				}
 			}
 
