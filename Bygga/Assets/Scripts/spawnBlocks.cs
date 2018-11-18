@@ -132,6 +132,39 @@ public class spawnBlocks : MonoBehaviour
 
 				break;
 			case Level.Zytglogge:
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Zytglocke" + Path.DirectorySeparatorChar + "fragment_01")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Zytglocke" + Path.DirectorySeparatorChar + "fragment_02")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Zytglocke" + Path.DirectorySeparatorChar + "fragment_03")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Zytglocke" + Path.DirectorySeparatorChar + "fragment_04")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+
 				break;
 			case Level.Chindlifresser:
                 buildingpart = (GameObject)Instantiate(
