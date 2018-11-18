@@ -89,6 +89,47 @@ public class spawnBlocks : MonoBehaviour
 
                 break;
 			case Level.Stadttheater:
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Stadttheater" + Path.DirectorySeparatorChar + "fragment_01")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Stadttheater" + Path.DirectorySeparatorChar + "fragment_02")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Stadttheater" + Path.DirectorySeparatorChar + "fragment_03")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Stadttheater" + Path.DirectorySeparatorChar + "fragment_04")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Stadttheater" + Path.DirectorySeparatorChar + "fragment_05")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+
 				break;
 			case Level.Zytglogge:
 				break;
