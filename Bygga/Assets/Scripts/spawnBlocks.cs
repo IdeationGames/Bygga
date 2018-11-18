@@ -15,6 +15,7 @@ public enum Level
 public class spawnBlocks : MonoBehaviour
 {
 	public Level level = Level.Bundeshaus;
+	public GameObject levelChangeCanvas;
 	private bool hookIsEmpty = true;
 
 	private List<GameObject> startElements = new List<GameObject>();
@@ -175,5 +176,34 @@ public class spawnBlocks : MonoBehaviour
                 activeBuildingPart.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D>().velocity;
             }
         }
-    }
+
+		displayLevelChangeCanvasAfterFinish();
+	}
+
+	private void displayLevelChangeCanvasAfterFinish()
+	{
+		if (levelChangeCanvas != null)
+		{
+			List<GameObject>.Enumerator tempEnumerator = startElements.GetEnumerator();
+			bool allPlaced = true;
+
+			while(tempEnumerator.MoveNext())
+			{
+				GameObject currentObj = tempEnumerator.Current;
+				if (!currentObj.GetComponent<Rigidbody2D>().IsSleeping())
+				{
+					allPlaced = false;
+				}
+			}
+
+			if (allPlaced)
+			{
+				levelChangeCanvas.SetActive(true);
+			}
+		}
+		else
+		{
+			Debug.LogWarning("no Canvas to display referenced");
+		}
+	}
 }
