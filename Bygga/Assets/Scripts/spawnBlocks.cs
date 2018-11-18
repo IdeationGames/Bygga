@@ -92,6 +92,32 @@ public class spawnBlocks : MonoBehaviour
 			case Level.Zytglogge:
 				break;
 			case Level.Chindlifresser:
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Chindlifraesser" + Path.DirectorySeparatorChar + "fragment_01")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Chindlifraesser" + Path.DirectorySeparatorChar + "fragment_02")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+                buildingpart = (GameObject)Instantiate(
+                    Resources.Load("Prefabs" + Path.DirectorySeparatorChar + "Chindlifraesser" + Path.DirectorySeparatorChar + "fragment_03")
+                );
+                buildingpart.transform.parent = this.transform;
+                buildingpart.GetComponent<Rigidbody2D>().simulated = false;
+                buildingpart.SetActive(false);
+                startElements.Add(buildingpart);
+
+
+
 				break;
 			case Level.Kornhausbruecke:
 				break;
