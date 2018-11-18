@@ -36,12 +36,15 @@ public class globalInfo : MonoBehaviour
         {
             gameScore += 5;
         }
-
-        Debug.Log(gameScore);
     }
 
     public static int getGameScore()
     {
         return gameScore;
     }
+
+	public static void resetGameScore()
+	{
+		gameScore = 0;
+	}
 }
