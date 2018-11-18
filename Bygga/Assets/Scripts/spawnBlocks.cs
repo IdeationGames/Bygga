@@ -287,6 +287,7 @@ public class spawnBlocks : MonoBehaviour
         }
 
 		displayLevelChangeCanvasAfterFinish();
+		displayMenuOnEsc();
 	}
 
 	private void displayLevelChangeCanvasAfterFinish()
@@ -326,6 +327,17 @@ public class spawnBlocks : MonoBehaviour
 		else
 		{
 			Debug.LogWarning("no Canvas to display referenced");
+		}
+	}
+
+	private void displayMenuOnEsc()
+	{
+		if (Input.GetButtonDown("Cancel"))
+		{
+			if (levelChangeCanvas != null)
+			{
+				levelChangeCanvas.SetActive(!levelChangeCanvas.active);
+			}
 		}
 	}
 }
