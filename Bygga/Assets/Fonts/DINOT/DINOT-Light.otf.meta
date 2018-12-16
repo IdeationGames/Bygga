@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: ebd89b20684e544269b5ba64d89e4ac0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DINOT
+  fontNames:
+  - DINOT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 47a432031cf0b42f2a46fff1eeac16b0, type: 3}
+  - {fileID: 12800000, guid: 2bd175f32da6849a8beaddc1fb85eef3, type: 3}
+  - {fileID: 12800000, guid: 3773553b4c8ea43a9bd371e96393f314, type: 3}
+  - {fileID: 12800000, guid: 8814a8bd0fed947a79169a60eb36a122, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
