@@ -1695,7 +1695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: RRAUMFORUM WEBSEITE
+  m_Text: RAUMFORUM WEBSEITE
 --- !u!222 &1156365273
 CanvasRenderer:
   m_ObjectHideFlags: 0
