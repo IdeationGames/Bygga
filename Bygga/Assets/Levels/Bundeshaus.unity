@@ -625,7 +625,7 @@ RectTransform:
   m_Children:
   - {fileID: 982048432}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -789,7 +789,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4481073588561528, guid: 357c237d528214565a2e39c5e81c9a41, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 212979710947583628, guid: 357c237d528214565a2e39c5e81c9a41,
         type: 2}

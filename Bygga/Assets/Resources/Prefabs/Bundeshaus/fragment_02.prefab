@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 50067491613743328}
   - component: {fileID: 82186744610350786}
   - component: {fileID: 114667556170569108}
-  - component: {fileID: 114324842819560056}
   m_Layer: 0
   m_Name: fragment_02
   m_TagString: Untagged
@@ -185,17 +184,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114324842819560056
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1631115191694720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e01cb2ad0fd9d9746852383ef4f912b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114667556170569108
 MonoBehaviour:
   m_ObjectHideFlags: 1
