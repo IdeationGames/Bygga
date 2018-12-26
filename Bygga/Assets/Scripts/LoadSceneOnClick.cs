@@ -7,7 +7,13 @@ public class LoadSceneOnClick : MonoBehaviour
 {
 	public void loadByIndex(int sceneIndex)
 	{
-		globalInfo.resetGameScore();
+		globalInfo.countScoreAndReset();
+		SceneManager.LoadScene(sceneIndex);
+	}
+
+	public void loadByIndexAndResetGlobalScore(int sceneIndex)
+	{
+		globalInfo.resetTotalScore();
 		SceneManager.LoadScene(sceneIndex);
 	}
 }

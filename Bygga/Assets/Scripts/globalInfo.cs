@@ -5,6 +5,7 @@ using UnityEngine;
 public class globalInfo : MonoBehaviour
 {
     private static int gameScore = 0;
+	private static int totalScore = 0;
 
 	// Use this for initialization
 	void Start ()
@@ -43,8 +44,24 @@ public class globalInfo : MonoBehaviour
         return gameScore;
     }
 
+	public static int getTotalScore()
+	{
+		return totalScore;
+	}
+
 	public static void resetGameScore()
 	{
 		gameScore = 0;
+	}
+
+	public static void resetTotalScore()
+	{
+		totalScore = 0;
+	}
+
+	public static void countScoreAndReset()
+	{
+		totalScore += gameScore;
+		resetGameScore();
 	}
 }

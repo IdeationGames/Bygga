@@ -336,7 +336,7 @@ public class spawnBlocks : MonoBehaviour
 		{
 			if (levelChangeCanvas != null)
 			{
-				levelChangeCanvas.SetActive(!levelChangeCanvas.active);
+				levelChangeCanvas.SetActive(!levelChangeCanvas.activeSelf);
 			}
 		}
 	}

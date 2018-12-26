@@ -7,6 +7,7 @@ public class comparePlacement : MonoBehaviour
 {
     public bool runComparison = true;
 
+	private Vector3 previousPos = new Vector3(0, 0, 0);
     private GameObject currentFragment;
     private bool isResting
     {
@@ -69,8 +70,19 @@ public class comparePlacement : MonoBehaviour
                 }
             }
         }
-        
-        if (currentFragment.GetComponent<Rigidbody2D>().IsSleeping())
+
+		Rigidbody2D rb = currentFragment.GetComponent<Rigidbody2D>();
+		float deltaX = this.previousPos.x - this.transform.position.x;
+		float deltaY = this.previousPos.y - this.transform.position.y;
+		//Debug.Log(deltaX + " " + deltaY + " " + rb.simulated + " " + rb.velocity.x + " " + rb.velocity.y);
+		this.previousPos = this.transform.position;
+
+		if (rb.simulated && deltaX == 0 && deltaY == 0 && Mathf.Abs(rb.velocity.x) < 0.001f && Mathf.Abs(rb.velocity.y) < 0.001f)
+		{
+			rb.Sleep();
+		}
+
+		if (rb.IsSleeping())
         {
             isResting = true;
         }
