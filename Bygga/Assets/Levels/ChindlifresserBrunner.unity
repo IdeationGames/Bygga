@@ -2434,7 +2434,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "N\xE4chstes Level"
+  m_Text: Fertig
 --- !u!222 &795096347
 CanvasRenderer:
   m_ObjectHideFlags: 0
