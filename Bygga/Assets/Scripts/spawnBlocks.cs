@@ -265,8 +265,11 @@ public class spawnBlocks : MonoBehaviour
         {
 			this.fireButtonDown = false;
 			spawnBtnDown = false;
-            this.spawnBtnClicked = true;
-        }
+			if (!this.hookIsEmpty)
+			{
+			    this.spawnBtnClicked = true;
+			}
+		}
 
 		updateTimer();
 
@@ -275,8 +278,9 @@ public class spawnBlocks : MonoBehaviour
 		{
             this.spawnBtnClicked = false;
             this.hookIsEmpty = false;
+			timeSinceLastClick = Time.timeSinceLevelLoad;
 
-            if (blocksEnumerator.MoveNext())
+			if (blocksEnumerator.MoveNext())
             {
                 activeBuildingPart = blocksEnumerator.Current;
                 activeBuildingPart.transform.position = transform.position;
@@ -291,8 +295,9 @@ public class spawnBlocks : MonoBehaviour
         {
             this.spawnBtnClicked = false;
             this.hookIsEmpty = true;
+			timeSinceLastClick = Time.timeSinceLevelLoad;
 
-            if (activeBuildingPart != null)
+			if (activeBuildingPart != null)
             {
                 activeBuildingPart.GetComponent<Rigidbody2D>().simulated = true;
                 activeBuildingPart.transform.parent = null;
@@ -302,6 +307,16 @@ public class spawnBlocks : MonoBehaviour
 
 		displayLevelChangeCanvasAfterFinish();
 		displayMenuOnEsc();
+	}
+
+	public void OnTriggerEnter2D(Collider2D collision)
+	{
+		Debug.Log(collision.name);
+		// "DeliveryTruck"
+		if (collision.name.Equals("DeliveryTruck"))
+		{
+			this.spawnBtnClicked = true;
+		}
 	}
 
 	private void updateTimer()
