@@ -181,7 +181,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Dieses Spiel wurde in Zusammenarbeit mit Raumforum und IdeationGames entwickelt.\n\nMichael
-    Sch\xFCrmann & Simon Hichier\nIdeation Games\nwww.ideationgames.ch\ninfo@ideationgames.ch\n2018\n\n"
+    Sch\xFCrmann & Simon Hischier\nIdeation Games\nwww.ideationgames.ch\ninfo@ideationgames.ch\n2019\n\n"
 --- !u!222 &4948650
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -235,7 +235,7 @@ Prefab:
     - target: {fileID: 21200000, guid: 7461a7b0cf97947fd9b9e4502fd2d07b, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 06c672685d145429f904db9f4603090d,
+      objectReference: {fileID: 21300000, guid: 4b448b8d773eba34eab45572a5c94f62,
         type: 3}
     - target: {fileID: 400002, guid: 7461a7b0cf97947fd9b9e4502fd2d07b, type: 2}
       propertyPath: m_LocalScale.x
@@ -251,6 +251,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 7461a7b0cf97947fd9b9e4502fd2d07b, type: 2}
       propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 7461a7b0cf97947fd9b9e4502fd2d07b, type: 2}
+      propertyPath: m_Size.x
+      value: 21.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 7461a7b0cf97947fd9b9e4502fd2d07b, type: 2}
+      propertyPath: m_Size.y
+      value: 13.600001
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 7461a7b0cf97947fd9b9e4502fd2d07b, type: 2}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

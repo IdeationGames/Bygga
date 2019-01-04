@@ -311,8 +311,6 @@ public class spawnBlocks : MonoBehaviour
 
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
-		Debug.Log(collision.name);
-		// "DeliveryTruck"
 		if (collision.name.Equals("DeliveryTruck"))
 		{
 			this.spawnBtnClicked = true;
