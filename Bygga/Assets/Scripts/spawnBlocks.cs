@@ -18,6 +18,7 @@ public class spawnBlocks : MonoBehaviour
 	public Level level = Level.Bundeshaus;
 	public GameObject levelChangeCanvas;
 	public Button nextLevelButton;
+	public Text timerText;
 	private bool hookIsEmpty = true;
 
 	private List<GameObject> startElements = new List<GameObject>();
@@ -31,9 +32,10 @@ public class spawnBlocks : MonoBehaviour
     private bool spawnBtnDown = false;
     private float timeSinceLastClick = 0.0f;
     private float minimumSecondsBeteenClicks = 0.1f;
+	private bool fireButtonDown = false;
 
-    // Use this for initialization
-    void Start ()
+	// Use this for initialization
+	void Start ()
 	{
 		GameObject buildingpart = null;
         timeSinceLastClick = Time.timeSinceLevelLoad;
@@ -244,20 +246,34 @@ public class spawnBlocks : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-        // handle clickevent
-        if (Input.GetButtonDown("Fire1") && (Time.timeSinceLevelLoad - timeSinceLastClick > minimumSecondsBeteenClicks))
+		if(Input.GetButtonDown("Fire1"))
+		{
+			this.fireButtonDown = true;
+		}
+		else if (Input.GetButtonUp("Fire1"))
+		{
+			this.fireButtonDown = false;
+		}
+		//Debug.Log(this.fireButtonDown);
+		Debug.Log(Input.GetButtonDown("Fire1"));
+
+		// handle clickevent
+		if (this.fireButtonDown && (Time.timeSinceLevelLoad - timeSinceLastClick > minimumSecondsBeteenClicks))
         {
             spawnBtnDown = true;
             timeSinceLastClick = Time.timeSinceLevelLoad;
         }
-        else if (Input.GetButtonUp("Fire1") && spawnBtnDown)
+        else if (this.fireButtonDown && spawnBtnDown)
         {
-            spawnBtnDown = false;
+			this.fireButtonDown = false;
+			spawnBtnDown = false;
             this.spawnBtnClicked = true;
         }
 
-        // spawn or drop when clicked
-        if (this.spawnBtnClicked && this.hookIsEmpty)
+		updateTimer();
+
+		// spawn or drop when clicked
+		if (this.spawnBtnClicked && this.hookIsEmpty)
 		{
             this.spawnBtnClicked = false;
             this.hookIsEmpty = false;
@@ -288,6 +304,26 @@ public class spawnBlocks : MonoBehaviour
 
 		displayLevelChangeCanvasAfterFinish();
 		displayMenuOnEsc();
+	}
+
+	private void updateTimer()
+	{
+		if (!this.hookIsEmpty)
+		{
+			float timeLeft = (10.0f) - (Time.timeSinceLevelLoad - timeSinceLastClick);
+			int beforeDecimal = int.Parse(timeLeft.ToString().Split('.')[0]);
+			int firstTwoDecimalPlaces = (int)(((decimal)timeLeft % 1) * 100);
+			timerText.text = beforeDecimal.ToString() + ":" + firstTwoDecimalPlaces.ToString();
+
+			if (timeLeft < 0.0f)
+			{
+				this.fireButtonDown = true;
+			}
+		}
+		else
+		{
+			timerText.text = "10:00";
+		}
 	}
 
 	private void displayLevelChangeCanvasAfterFinish()
