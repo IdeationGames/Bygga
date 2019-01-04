@@ -254,8 +254,6 @@ public class spawnBlocks : MonoBehaviour
 		{
 			this.fireButtonDown = false;
 		}
-		//Debug.Log(this.fireButtonDown);
-		Debug.Log(Input.GetButtonDown("Fire1"));
 
 		// handle clickevent
 		if (this.fireButtonDown && (Time.timeSinceLevelLoad - timeSinceLastClick > minimumSecondsBeteenClicks))
