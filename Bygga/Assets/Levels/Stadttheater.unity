@@ -6536,7 +6536,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2049975105}
-        m_MethodName: loadByIndex
+        m_MethodName: resetLevelScoreAndLoadIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -11,6 +11,12 @@ public class LoadSceneOnClick : MonoBehaviour
 		SceneManager.LoadScene(sceneIndex);
 	}
 
+	public void resetLevelScoreAndLoadIndex(int sceneIndex)
+	{
+		globalInfo.resetGameScore();
+		SceneManager.LoadScene(sceneIndex);
+	}
+
 	public void loadByIndexAndResetGlobalScore(int sceneIndex)
 	{
 		globalInfo.resetTotalScore();
