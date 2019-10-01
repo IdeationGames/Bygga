@@ -2003,8 +2003,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 240.25, y: -93.447495}
-  m_SizeDelta: {x: 353.98, y: 176.99}
+  m_AnchoredPosition: {x: 287.9, y: -197.2}
+  m_SizeDelta: {x: 449.4, y: 384.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138309338
 MonoBehaviour:
@@ -2027,7 +2027,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 47a432031cf0b42f2a46fff1eeac16b0, type: 3}
-    m_FontSize: 16
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2038,8 +2038,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mausklick / Leertaste: \n\nElement erzeugen & fallen lassen\n\n\nA/D oder
-    Pfeiltasten Links/Rechts:\n\nKrankopf bewegen"
+  m_Text: "Pfeiltasten Links/Rechts:\n\nKrankopf bewegen\n\nMausklick / Leertaste:
+    \n\nFragment fallen lassen\n\nSpielprinzip:\n\nMit der Pfeiltaste den Krankopf
+    zum Feld mit dem BYGGA Logo bewegen um ein Fragment abzuholen. Danach muss es
+    so schnell wie M\xF6glich am passenden Ort per Mausklick platziert werden um eine
+    hohe Punktzahl zu erhalten."
 --- !u!222 &2138309339
 CanvasRenderer:
   m_ObjectHideFlags: 0
