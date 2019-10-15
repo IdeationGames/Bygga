@@ -6,11 +6,12 @@ public class globalInfo : MonoBehaviour
 {
     private static int gameScore = 0;
 	private static int totalScore = 0;
+    private static int highScore = 0;
 
 	// Use this for initialization
 	void Start ()
     {
-		
+        
 	}
 	
 	// Update is called once per frame
@@ -46,7 +47,7 @@ public class globalInfo : MonoBehaviour
 
 	public static int getTotalScore()
 	{
-		return totalScore;
+        return totalScore;
 	}
 
 	public static void resetGameScore()
@@ -61,7 +62,27 @@ public class globalInfo : MonoBehaviour
 
 	public static void countScoreAndReset()
 	{
-		totalScore += gameScore;
-		resetGameScore();
+        totalScore += gameScore;
+        UpdateHighscoreIfHigher(totalScore);
+        resetGameScore();
 	}
+
+    public static int GetHighscore()
+    {
+        int currentHighscore = PlayerPrefs.GetInt("totalScore");
+        return currentHighscore;
+    }
+
+    public static void UpdateHighscoreIfHigher(int score)
+    {
+        Debug.Log("highscore check");
+        int newHighscore = getTotalScore();
+        int currentHighscore = PlayerPrefs.GetInt("totalScore");
+        if (newHighscore > currentHighscore)
+        {
+            PlayerPrefs.SetInt("totalScore", currentHighscore);
+            PlayerPrefs.Save();
+        }
+
+    }
 }
