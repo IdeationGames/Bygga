@@ -6,7 +6,6 @@ public class globalInfo : MonoBehaviour
 {
     private static int gameScore = 0;
 	private static int totalScore = 0;
-    private static int highScore = 0;
 
 	// Use this for initialization
 	void Start ()
@@ -64,7 +63,7 @@ public class globalInfo : MonoBehaviour
 	{
         totalScore += gameScore;
         UpdateHighscoreIfHigher(totalScore);
-        resetGameScore();
+		resetGameScore();
 	}
 
     public static int GetHighscore()
@@ -78,9 +77,10 @@ public class globalInfo : MonoBehaviour
         Debug.Log("highscore check");
         int newHighscore = getTotalScore();
         int currentHighscore = PlayerPrefs.GetInt("totalScore");
+		Debug.Log(newHighscore + " > " + currentHighscore + " " + (newHighscore > currentHighscore));
         if (newHighscore > currentHighscore)
         {
-            PlayerPrefs.SetInt("totalScore", currentHighscore);
+            PlayerPrefs.SetInt("totalScore", newHighscore);
             PlayerPrefs.Save();
         }
 
